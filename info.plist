@@ -21,7 +21,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>6B10D305-F6F9-4839-9B0B-E32F0E983EA4</string>
+				<string>64263954-8DBB-4585-B3DA-7569AD6781C0</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -30,11 +30,22 @@
 		</array>
 		<key>740DB62E-BE08-4E85-B75C-E7DD95C6D92A</key>
 		<array/>
+		<key>76203F71-C3D8-4B9B-B351-259902BC0189</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CAC7DC52-C000-4FF7-9D38-145039903119</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>9F8EDDA1-A86A-42B3-9BA7-2457A359D7BA</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>4B05C8EF-4A6A-4913-B343-17CF0759135F</string>
+				<string>B5EE7276-D4D5-450B-8EA5-6149E8A90C55</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -45,7 +56,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>74E2D153-FE95-4F2D-B422-986F2B17619B</string>
+				<string>CAC7DC52-C000-4FF7-9D38-145039903119</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -66,17 +77,17 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-	tell application "Tomahawk" to next track
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>/Applications/Tomahawk.app/Contents/MacOS/Tomahawk --next</string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>4B05C8EF-4A6A-4913-B343-17CF0759135F</string>
+			<string>B5EE7276-D4D5-450B-8EA5-6149E8A90C55</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -84,48 +95,18 @@ end alfred_script</string>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>prev</string>
+				<string>next</string>
 				<key>subtext</key>
-				<string>Play previous track in Tomahawk</string>
+				<string>Skip to the next track in Tomahawk</string>
 				<key>text</key>
-				<string>Previous Track</string>
+				<string>Next Track</string>
 				<key>withspace</key>
 				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>4E8455A2-28B2-45B2-8044-2DA4F31265A3</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-	tell application "Tomahawk" to playpause
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>74E2D153-FE95-4F2D-B422-986F2B17619B</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-	tell application "Tomahawk" to previous track
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>6B10D305-F6F9-4839-9B0B-E32F0E983EA4</string>
+			<string>9F8EDDA1-A86A-42B3-9BA7-2457A359D7BA</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -141,6 +122,25 @@ end alfred_script</string>
 			<string>alfred.workflow.action.applescript</string>
 			<key>uid</key>
 			<string>6E7E31C0-F552-4D7D-B8BC-6D2365639725</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>play</string>
+				<key>subtext</key>
+				<string>Tomahawk Toggle Play/Pause</string>
+				<key>text</key>
+				<string>Play/Pause Tomahawk</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>A9F4E077-2490-45B9-9984-C0B7EBF0B40F</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -172,6 +172,74 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>/Applications/Tomahawk.app/Contents/MacOS/Tomahawk --prev</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>64263954-8DBB-4585-B3DA-7569AD6781C0</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>pause</string>
+				<key>subtext</key>
+				<string>Pause Tomahawk</string>
+				<key>text</key>
+				<string>Pause</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>76203F71-C3D8-4B9B-B351-259902BC0189</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>/Applications/Tomahawk.app/Contents/MacOS/Tomahawk --playpause</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>CAC7DC52-C000-4FF7-9D38-145039903119</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>prev</string>
+				<key>subtext</key>
+				<string>Play previous track in Tomahawk</string>
+				<key>text</key>
+				<string>Previous Track</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4E8455A2-28B2-45B2-8044-2DA4F31265A3</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>escaping</key>
@@ -196,44 +264,6 @@ end alfred_script</string>
 			<key>uid</key>
 			<string>740DB62E-BE08-4E85-B75C-E7DD95C6D92A</string>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>play</string>
-				<key>subtext</key>
-				<string>Tomahawk Toggle Play/Pause</string>
-				<key>text</key>
-				<string>Play/Pause Tomahawk</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>A9F4E077-2490-45B9-9984-C0B7EBF0B40F</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>next</string>
-				<key>subtext</key>
-				<string>Skip to the next track in Tomahawk</string>
-				<key>text</key>
-				<string>Next Track</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>9F8EDDA1-A86A-42B3-9BA7-2457A359D7BA</string>
-		</dict>
 	</array>
 	<key>uidata</key>
 	<dict>
@@ -242,45 +272,50 @@ end alfred_script</string>
 			<key>ypos</key>
 			<real>130</real>
 		</dict>
-		<key>4B05C8EF-4A6A-4913-B343-17CF0759135F</key>
-		<dict>
-			<key>ypos</key>
-			<real>370</real>
-		</dict>
 		<key>4E8455A2-28B2-45B2-8044-2DA4F31265A3</key>
 		<dict>
 			<key>ypos</key>
-			<real>490</real>
+			<real>610</real>
 		</dict>
-		<key>6B10D305-F6F9-4839-9B0B-E32F0E983EA4</key>
+		<key>64263954-8DBB-4585-B3DA-7569AD6781C0</key>
 		<dict>
 			<key>ypos</key>
-			<real>490</real>
+			<real>610</real>
 		</dict>
 		<key>6E7E31C0-F552-4D7D-B8BC-6D2365639725</key>
 		<dict>
 			<key>ypos</key>
-			<real>120</real>
+			<real>130</real>
 		</dict>
 		<key>740DB62E-BE08-4E85-B75C-E7DD95C6D92A</key>
 		<dict>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
-		<key>74E2D153-FE95-4F2D-B422-986F2B17619B</key>
-		<dict>
-			<key>ypos</key>
-			<real>250</real>
-		</dict>
-		<key>9F8EDDA1-A86A-42B3-9BA7-2457A359D7BA</key>
+		<key>76203F71-C3D8-4B9B-B351-259902BC0189</key>
 		<dict>
 			<key>ypos</key>
 			<real>370</real>
 		</dict>
+		<key>9F8EDDA1-A86A-42B3-9BA7-2457A359D7BA</key>
+		<dict>
+			<key>ypos</key>
+			<real>490</real>
+		</dict>
 		<key>A9F4E077-2490-45B9-9984-C0B7EBF0B40F</key>
 		<dict>
 			<key>ypos</key>
-			<real>240</real>
+			<real>250</real>
+		</dict>
+		<key>B5EE7276-D4D5-450B-8EA5-6149E8A90C55</key>
+		<dict>
+			<key>ypos</key>
+			<real>490</real>
+		</dict>
+		<key>CAC7DC52-C000-4FF7-9D38-145039903119</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>

@@ -36,7 +36,7 @@ foreach( $out->result->results as $result ):
 		$uid = 'thartist';
 		$arg = "tomahawk://view/artist?name=".$result->name;
 		$title = $result->name;
-		$subtitle = $result->length. ' tracks available on Rdio';
+		$subtitle = $result->length. ' tracks available on Tomahawk';
 		$icon = 'th-artist.png';
 	endif;
 
