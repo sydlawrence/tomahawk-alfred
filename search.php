@@ -21,23 +21,23 @@ $out = $rdio->call( 'search', array( 'query' => $query, 'types' => 'Track,Album,
 foreach( $out->result->results as $result ):
 
 	if ( $result->type == "t" ):
-		$uid = 'rdiotrack';
+		$uid = 'thtrack';
 		$title = $result->name;
 		$arg = "tomahawk://play/track?title=".$result->name."&artist=".$result->artist;
 		$subtitle = $result->artist. " - " .$result->album;
-		$icon = 'rdio-track.png';
+		$icon = 'th-track.png';
 	elseif ( $result->type == "a" ):
-		$uid = 'rdioalbum';
+		$uid = 'thalbum';
 		$arg = "tomahawk://view/album?artist=".$result->artist."&name=".$result->name;
 		$title = $result->name;
 		$subtitle = $result->artist;
-		$icon = 'rdio-album.png';
+		$icon = 'th-album.png';
 	elseif ( $result->type == "r" ):
-		$uid = 'rdioartist';
+		$uid = 'thartist';
 		$arg = "tomahawk://view/artist?name=".$result->name;
 		$title = $result->name;
 		$subtitle = $result->length. ' tracks available on Rdio';
-		$icon = 'rdio-artist.png';
+		$icon = 'th-artist.png';
 	endif;
 
 	$w->result( $uid, $arg, $title, $subtitle, $icon );
