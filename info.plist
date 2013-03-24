@@ -63,6 +63,17 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>C70ADD12-9653-49C0-9B37-12C72DFC3CEC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>481F38D8-66BE-43EB-9D70-6D55AB56F0D3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Syd Lawrence</string>
@@ -74,6 +85,42 @@
 	<string>Tomahawk</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>station</string>
+				<key>subtext</key>
+				<string>New Tomahawk Station</string>
+				<key>text</key>
+				<string>Station</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>C70ADD12-9653-49C0-9B37-12C72DFC3CEC</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>
+
+on alfred_script(q)
+	do shell script "open 'tomahawk://station/create/?type=echonest&amp;title=" &amp; q &amp; "&amp;artist=" &amp; q &amp; "'"
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>481F38D8-66BE-43EB-9D70-6D55AB56F0D3</string>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -265,12 +312,23 @@ end alfred_script</string>
 			<string>740DB62E-BE08-4E85-B75C-E7DD95C6D92A</string>
 		</dict>
 	</array>
+	<key>readme</key>
+	<string>th &lt;search_query&gt;
+station &lt;decription&gt;
+next
+prev
+pause</string>
 	<key>uidata</key>
 	<dict>
 		<key>09690A18-3C0D-4B7D-A8B1-FC13BA289F42</key>
 		<dict>
 			<key>ypos</key>
 			<real>130</real>
+		</dict>
+		<key>481F38D8-66BE-43EB-9D70-6D55AB56F0D3</key>
+		<dict>
+			<key>ypos</key>
+			<real>730</real>
 		</dict>
 		<key>4E8455A2-28B2-45B2-8044-2DA4F31265A3</key>
 		<dict>
@@ -311,6 +369,11 @@ end alfred_script</string>
 		<dict>
 			<key>ypos</key>
 			<real>490</real>
+		</dict>
+		<key>C70ADD12-9653-49C0-9B37-12C72DFC3CEC</key>
+		<dict>
+			<key>ypos</key>
+			<real>730</real>
 		</dict>
 		<key>CAC7DC52-C000-4FF7-9D38-145039903119</key>
 		<dict>
